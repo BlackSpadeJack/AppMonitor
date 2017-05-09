@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.monitor"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+
+    <application
+        android:name=".utils.MyApplication"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <activity
+            android:name=".activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.MailSettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.app.monitor.activity.FileBrowser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.monitor.activity.ActivityLifeCycleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.monitor.activity.CrashLogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.monitor.activity.CrashLogDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.monitor.activity.DebugMessageListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.monitor.activity.DebugTabActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.monitor.activity.FloatViewSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.monitor.activity.PastNetLogActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.monitor.activity.PastNetLogDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.app.monitor.activity.ScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.app.monitor.activity.ScanScreenVideoActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.app.monitor.service.MonitorService" />
+    </application>
+
+</manifest>

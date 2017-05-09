@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.app.monitor.boommenu.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shadow_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:sl_cornerRadius="@dimen/default_circle_button_corner_2radius"
+    app:sl_dx="0dp"
+    app:sl_dy="0dp"
+    app:sl_shadowColor="@color/shadow"
+    app:sl_shadowRadius="@dimen/default_shadow_radius" >
+
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="@dimen/default_circle_button_corner_2radius"
+        android:layout_height="@dimen/default_circle_button_corner_2radius"
+        android:background="@drawable/circle_button" >
+
+        <ImageButton
+            android:id="@+id/image_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:scaleType="center"
+            tools:ignore="ContentDescription" />
+
+        <View
+            android:id="@+id/ripple"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:clickable="true" />
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/circle_button"
+            android:scaleType="center"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="8.5dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/default_circle_button_text_size" />
+    </FrameLayout>
+
+</com.app.monitor.boommenu.ShadowLayout>
